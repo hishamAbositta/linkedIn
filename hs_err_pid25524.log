@@ -1,0 +1,160 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x0000000069132ec3, pid=25524, tid=28532
+#
+# JRE version:  (9.0+11) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (9.0.1+11, mixed mode, tiered, compressed oops, g1 gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x1b2ec3]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dmaven.multiModuleProjectDirectory=C:\Users\hisha\IdeaProjects\mobileAutomation -Dmaven.home=D:\itellij\plugins\maven\lib\maven3 -Dclassworlds.conf=D:\itellij\plugins\maven\lib\maven3\bin\m2.conf -Dmaven.ext.class.path=D:\itellij\plugins\maven\lib\maven-event-listener.jar -javaagent:D:\itellij\lib\idea_rt.jar=50667:D:\itellij\bin -Dfile.encoding=UTF-8 org.codehaus.classworlds.Launcher -Didea.version=2020.3.2 clean install
+
+Host: Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz, 8 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.804)
+Time: Fri Mar 05 23:33:15 2021 Egypt Standard Time elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000190d4da1000):  JavaThread "Unknown thread" [_thread_in_vm, id=28532, stack(0x0000000727000000,0x0000000727100000)]
+
+Stack: [0x0000000727000000,0x0000000727100000],  sp=0x00000007270ff430,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x0000000000000000
+
+
+Registers:
+RAX=0x0000000000000001, RBX=0x0000000000000000, RCX=0x0000000000000000, RDX=0x00000190d4d68e01
+RSP=0x00000007270ff430, RBP=0x0000000000000000, RSI=0x00000007270ff868, RDI=0x00000190d4da1000
+R8 =0x0000000000000000, R9 =0x0000000000000006, R10=0x0000000000000006, R11=0x00000007270feca0
+R12=0x00000000694bf800, R13=0x00000190d4d710a0, R14=0x00000190d4d7f6c8, R15=0x0000000000000000
+RIP=0x0000000069132ec3, EFLAGS=0x0000000000010256
+
+Top of Stack: (sp=0x00000007270ff430)
+0x00000007270ff430:   00000190d4daaa80 000000006952d9c3
+0x00000007270ff440:   0000000000000038 00000000694e18cd
+0x00000007270ff450:   0000000069759708 00000000696f7d60
+0x00000007270ff460:   0000000000000140 00000007270ff4c0
+0x00000007270ff470:   00000190d4da1000 00000000694e1c25
+0x00000007270ff480:   00000190d4d9e450 0000000000000000
+0x00000007270ff490:   0000000000000000 00000000694e1607
+0x00000007270ff4a0:   0000000000000000 000000006952d7b9
+0x00000007270ff4b0:   00000e1f7b8d9e53 0000000068f80000
+0x00000007270ff4c0:   00000190d4daaa80 0000000000000000
+0x00000007270ff4d0:   0000000000000004 000026db06cfc4b9
+0x00000007270ff4e0:   0000000000000000 0000000069132a75
+0x00000007270ff4f0:   0000000000000004 0000000000000000
+0x00000007270ff500:   00000190d4d710a0 00000007270ff868
+0x00000007270ff510:   00000007270ff550 0000000069130e21
+0x00000007270ff520:   0000000000000000 00000007270ff550 
+
+Instructions: (pc=0x0000000069132ec3)
+0x0000000069132ea3:   48 33 c4 48 89 84 24 a8 00 00 00 0f b6 c2 88 54
+0x0000000069132eb3:   24 31 48 8b e9 49 83 c8 ff 0f 1f 40 00 49 ff c0
+0x0000000069132ec3:   41 80 3c 08 00 75 f6 33 f6 45 33 ed 88 44 24 30
+0x0000000069132ed3:   45 85 c0 0f 8e 78 02 00 00 8b 0d 62 01 7e 00 65 
+
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+[error occurred during error reporting (printing all threads), id 0xc0000005]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+
+[error occurred during error reporting (printing compressed oops mode), id 0xc0000005]
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6efcf0000 - 0x00007ff6efd2e000 	C:\Program Files\Java\jdk-9.0.1\bin\java.exe
+0x00007fff2c7b0000 - 0x00007fff2c9a6000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fff24ca0000 - 0x00007fff24cb2000 	C:\Program Files\Avast Software\Avast\aswhook.dll
+0x00007fff2afc0000 - 0x00007fff2b07d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fff2a2e0000 - 0x00007fff2a5a9000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fff2b490000 - 0x00007fff2b53c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fff2c580000 - 0x00007fff2c61e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fff2b280000 - 0x00007fff2b31c000 	C:\WINDOWS\System32\sechost.dll
+0x00007fff2b540000 - 0x00007fff2b66b000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fff2bb50000 - 0x00007fff2bcf0000 	C:\WINDOWS\System32\USER32.dll
+0x00007fff2a1d0000 - 0x00007fff2a1f2000 	C:\WINDOWS\System32\win32u.dll
+0x00007fff2b400000 - 0x00007fff2b42a000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fff29ef0000 - 0x00007fff29ffb000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fff2a710000 - 0x00007fff2a7ad000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fff2a000000 - 0x00007fff2a100000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fff12690000 - 0x00007fff1292b000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.746_none_ca02b4b61b8320a4\COMCTL32.dll
+0x00007fff229d0000 - 0x00007fff229da000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fff2b250000 - 0x00007fff2b280000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffeee630000 - 0x00007ffeee71f000 	C:\Program Files\Java\jdk-9.0.1\bin\msvcr120.dll
+0x00007ffef6c80000 - 0x00007ffef6d26000 	C:\Program Files\Java\jdk-9.0.1\bin\msvcp120.dll
+0x0000000068f80000 - 0x00000000699a4000 	C:\Program Files\Java\jdk-9.0.1\bin\server\jvm.dll
+0x00007fff2c620000 - 0x00007fff2c628000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007fff1f820000 - 0x00007fff1f829000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007fff2c380000 - 0x00007fff2c3eb000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fff20610000 - 0x00007fff20637000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fff270b0000 - 0x00007fff270bf000 	C:\Program Files\Java\jdk-9.0.1\bin\verify.dll
+0x00007fff12b70000 - 0x00007fff12b97000 	C:\Program Files\Java\jdk-9.0.1\bin\java.dll
+0x00007fff12ad0000 - 0x00007fff12afa000 	C:\Program Files\Java\jdk-9.0.1\bin\instrument.dll
+0x00007fff1b8c0000 - 0x00007fff1b8d6000 	C:\Program Files\Java\jdk-9.0.1\bin\zip.dll
+0x00007fff24600000 - 0x00007fff2460a000 	C:\Program Files\Java\jdk-9.0.1\bin\jimage.dll
+0x00007fff28720000 - 0x00007fff28904000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+0x00007fff2a150000 - 0x00007fff2a1d0000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+
+VM Arguments:
+jvm_args: -Dmaven.multiModuleProjectDirectory=C:\Users\hisha\IdeaProjects\mobileAutomation -Dmaven.home=D:\itellij\plugins\maven\lib\maven3 -Dclassworlds.conf=D:\itellij\plugins\maven\lib\maven3\bin\m2.conf -Dmaven.ext.class.path=D:\itellij\plugins\maven\lib\maven-event-listener.jar -javaagent:D:\itellij\lib\idea_rt.jar=50667:D:\itellij\bin -Dfile.encoding=UTF-8 
+java_command: org.codehaus.classworlds.Launcher -Didea.version=2020.3.2 clean install
+java_class_path (initial): D:\itellij\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;D:\itellij\plugins\maven\lib\maven3\boot\plexus-classworlds.license
+Launcher Type: SUN_STANDARD
+
+Logging:
+Log output configuration:
+#0: stdout all=warning uptime,level,tags
+#1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-9.0.1\bin
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Users\hisha\eclipse\jee-oxygen\eclipse\jre\bin;C:\Program Files\nodejs\;C:\WINDOWS\system32\notepad.exe;D:\WepAutomation\nodeJS\Gecko;D:\WepAutomation\chrome;D:\android\Sdk;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;D:\Eclipse\allure-2.7.0\bin;D:\Eclipse\apache-maven-3.5.2\bin;C:\Python27;C:\Program Files\Java\jdk-9.0.1\bin;C:\Users\hisha\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;D:\android\Sdk;D:\android\Sdk\platform-tools;D:\android\Sdk\tools;C:\Program Files\Java\jdk1.8.0_151;C:\Users\hisha\AppData\Local\Microsoft\WindowsApps;D:\FlutterSetup\flutter\bin;
+USERNAME=hisha
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.804)
+
+CPU:total 8 (initial active 8) 
+
+Memory: 4k page, physical 8298776k(1080832k free), swap 14713056k(3729396k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (9.0.1+11) for windows-amd64 JRE (9.0.1+11), built on Sep 28 2017 04:54:03 by "mach5one" with MS VC++ 12.0 (VS2013)
+
+END.
