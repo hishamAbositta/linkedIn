@@ -29,8 +29,8 @@ public class appiumTest {
     }
     @Test(priority = 1)
     public static void openLinkedIn()  {
-        MobileElement signin = driver.findElement(By.id("com.linkedin.android:id/growth_prereg_fragment_login_button"));
-        signin.click();
+        MobileElement signIn = driver.findElement(By.id("com.linkedin.android:id/growth_prereg_fragment_login_button"));
+        signIn.click();
         MobileElement Email = driver.findElement(By.id("com.linkedin.android:id/growth_prereg_fragment_login_Email"));
         Email.sendKeys("test1212");
         MobileElement pass = driver.findElement(By.id("com.linkedin.android:id/growth_prereg_fragment_login_pass"));
