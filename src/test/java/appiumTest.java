@@ -25,17 +25,24 @@ public class appiumTest {
         cap.setCapability("appPackage","com.linkedin.android");
         cap.setCapability("appActivity","com.linkedin.android.authenticator.LaunchActivity");
         URL url = new URL("http://127.0.0.1:4723/wd/hub");
-        driver = new AppiumDriver(url,cap);
+        driver = new AndroidDriver<MobileElement>(url,cap);
     }
     @Test(priority = 1)
     public static void openLinkedIn()  {
         MobileElement signIn = driver.findElement(By.id("com.linkedin.android:id/growth_prereg_fragment_login_button"));
         signIn.click();
-        MobileElement Email = driver.findElement(By.id("com.linkedin.android:id/growth_prereg_fragment_login_Email"));
-        Email.sendKeys("test1212");
-        MobileElement pass = driver.findElement(By.id("com.linkedin.android:id/growth_prereg_fragment_login_pass"));
-        pass.sendKeys("test12121313");
-        MobileElement continueBtn = driver.findElement(By.id("com.linkedin.android:id/growth_prereg_fragment_login_continue"));
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
+        MobileElement email = driver.findElement(By.id("com.linkedin.android:id/growth_login_join_fragment_email_address"));
+        email.clear();
+        driver.hideKeyboard();
+        email.sendKeys("hishamabositta@gmail.com");
+        MobileElement password = driver.findElement(By.id("com.linkedin.android:id/growth_login_join_fragment_password"));
+        password.clear();
+        driver.hideKeyboard();
+        password.sendKeys("3218458h");
+
+        MobileElement continueBtn = driver.findElement(By.id("com.linkedin.android:id/growth_login_fragment_sign_in"));
         continueBtn.click();
 
 
