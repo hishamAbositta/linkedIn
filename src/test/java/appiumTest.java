@@ -100,8 +100,8 @@ public class appiumTest {
     }
     public void getPost(){
         try {
-            driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
-            MobileElement clickOnPost = driver.findElement(By.id("com.linkedin.android:id/search_entity_result_content_summary"));
+            driver.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
+            MobileElement clickOnPost = driver.findElement(By.xpath("//*[@text='...and sent your CV to hossam.youssof@samesystem.com to go forward to the next hiring process.  Requirements: - Minimum 3 years of professional software QA experience - 3+ years of hands-on...']"));
             clickOnPost.click();
         }catch (NoSuchElementException e){
         getPost();
